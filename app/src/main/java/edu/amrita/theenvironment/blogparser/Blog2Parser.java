@@ -1,4 +1,4 @@
-package edu.amrita.theenvironment.blog1;
+package edu.amrita.theenvironment.blogparser;
 
 import android.os.AsyncTask;
 
