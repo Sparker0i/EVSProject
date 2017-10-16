@@ -1,4 +1,4 @@
-package edu.amrita.theenvironment.blogparser;
+package edu.amrita.theenvironment.blog4;
 
 import android.os.AsyncTask;
 
@@ -9,11 +9,11 @@ import java.io.IOException;
 
 import edu.amrita.theenvironment.utils.Constants;
 
-public class Blog2Parser {
+public class Blog4Parser {
 
     private static Document document;
 
-    public Blog2Parser() {}
+    public Blog4Parser() {}
 
     public static void run() {
         new Thread(new Runnable() {
@@ -29,13 +29,13 @@ public class Blog2Parser {
         @Override
         protected Void doInBackground(Void... params) {
             try {
-                document = Jsoup.connect(Constants.blog2).get();
+                document = Jsoup.connect(Constants.blog4).get();
             }
             catch (IOException iex) {
                 iex.printStackTrace();
             }
-            document = Jsoup.parse(document.html().substring(document.html().indexOf("recent-posts-2")+106,
-                    document.html().indexOf("archives-2")-23));
+            document = Jsoup.parse(document.html().substring(document.html().indexOf("<ul class=\"title-list__entries\">"),
+                    document.html().indexOf("<section class=\"standard-listing-row-layout\">")-44));
             /*int idx = document.html().indexOf("Unaffiliated components</h2>");
             document = Jsoup.parse(document.html().substring(0 , idx + 28) + "<p></p>" + document.html().substring(idx + 28 , document.html().length()));*/
             System.out.println(document);

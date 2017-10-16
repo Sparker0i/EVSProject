@@ -1,5 +1,6 @@
-package edu.amrita.theenvironment.blogparser;
+package edu.amrita.theenvironment.blog5;
 
+import android.content.Context;
 import android.os.AsyncTask;
 
 import org.jsoup.Jsoup;
@@ -9,13 +10,16 @@ import java.io.IOException;
 
 import edu.amrita.theenvironment.utils.Constants;
 
-public class Blog4Parser {
+public class Blog5Parser {
 
     private static Document document;
+    private static Context context;
 
-    public Blog4Parser() {}
+    public Blog5Parser(Context context) {
+        Blog5Parser.context = context;
+    }
 
-    public static void run() {
+    public void run() {
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -29,16 +33,17 @@ public class Blog4Parser {
         @Override
         protected Void doInBackground(Void... params) {
             try {
-                document = Jsoup.connect(Constants.blog4).get();
+                document = Jsoup.connect(Constants.blog5).get();
             }
             catch (IOException iex) {
                 iex.printStackTrace();
             }
-            document = Jsoup.parse(document.html().substring(document.html().indexOf("<ul class=\"title-list__entries\">"),
-                    document.html().indexOf("<section class=\"standard-listing-row-layout\">")-44));
+            document = Jsoup.parse(document.html().substring(document.html().indexOf("<ul class=\"small-block-grid-1 medium-block-grid-2\">"),
+                    document.html().indexOf("<div class=\"small-12 medium-5 large-4 columns\">")));
             /*int idx = document.html().indexOf("Unaffiliated components</h2>");
             document = Jsoup.parse(document.html().substring(0 , idx + 28) + "<p></p>" + document.html().substring(idx + 28 , document.html().length()));*/
             System.out.println(document);
+            CardMaker.makeCards(context , document);
             return null;
         }
 

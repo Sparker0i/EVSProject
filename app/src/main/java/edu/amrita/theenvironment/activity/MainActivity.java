@@ -4,10 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import edu.amrita.theenvironment.R;
-import edu.amrita.theenvironment.blogparser.Blog2Parser;
-import edu.amrita.theenvironment.blogparser.Blog3Parser;
-import edu.amrita.theenvironment.blogparser.Blog4Parser;
-import edu.amrita.theenvironment.blogparser.Blog5Parser;
+import edu.amrita.theenvironment.app.App;
+import edu.amrita.theenvironment.blog5.Blog5Parser;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Blog5Parser.run();
+        App.init();
+        new Blog5Parser(this).run();
     }
 }
