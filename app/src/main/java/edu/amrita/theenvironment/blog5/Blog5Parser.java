@@ -43,7 +43,7 @@ public class Blog5Parser {
             /*int idx = document.html().indexOf("Unaffiliated components</h2>");
             document = Jsoup.parse(document.html().substring(0 , idx + 28) + "<p></p>" + document.html().substring(idx + 28 , document.html().length()));*/
             System.out.println(document);
-            CardMaker.makeCards(context , document);
+            Card5Maker.makeCards(context , document);
             return null;
         }
 

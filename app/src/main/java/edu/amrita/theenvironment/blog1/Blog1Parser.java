@@ -1,5 +1,6 @@
 package edu.amrita.theenvironment.blog1;
 
+import android.content.Context;
 import android.os.AsyncTask;
 
 import org.jsoup.Jsoup;
@@ -12,10 +13,13 @@ import edu.amrita.theenvironment.utils.Constants;
 public class Blog1Parser {
 
     private static Document document;
+    private static Context context;
 
-    public Blog1Parser() {}
+    public Blog1Parser(Context context) {
+        Blog1Parser.context = context;
+    }
 
-    public static void run() {
+    public void run() {
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -34,11 +38,10 @@ public class Blog1Parser {
             catch (IOException iex) {
                 iex.printStackTrace();
             }
-            document = Jsoup.parse(document.html().substring(document.html().indexOf("recent-posts-3")+106,
-                    document.html().indexOf("categories-2")-23));
-            /*int idx = document.html().indexOf("Unaffiliated components</h2>");
-            document = Jsoup.parse(document.html().substring(0 , idx + 28) + "<p></p>" + document.html().substring(idx + 28 , document.html().length()));*/
-            System.out.println(document);
+            document = Jsoup.parse(document.html().substring(document.html().indexOf("<article id="),
+                    document.html().indexOf("<nav role=\"navigation\" id=\"nav-below\" class=\"paging-navigation\">")));
+            //System.out.println(document);
+            Card1Maker.makeCards(context , document);
             return null;
         }
 
