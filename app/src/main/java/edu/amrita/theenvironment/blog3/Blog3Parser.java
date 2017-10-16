@@ -4,6 +4,7 @@ import android.os.AsyncTask;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import android.content.Context;
 
 import java.io.IOException;
 
@@ -12,8 +13,11 @@ import edu.amrita.theenvironment.utils.Constants;
 public class Blog3Parser {
 
     private static Document document;
+    private static Context context;
 
-    public Blog3Parser() {}
+    public Blog3Parser(Context context) {
+        Blog3Parser.context = context;
+    }
 
     public static void run() {
         new Thread(new Runnable() {
@@ -35,7 +39,8 @@ public class Blog3Parser {
                 iex.printStackTrace();
             }
             document = Jsoup.parse(document.html().substring(document.html().lastIndexOf("stream-item-list")-9 , document.html().indexOf("<div id=\"pagination\"> ")));
-            System.out.println(document);
+            //System.out.println(document);
+            Card3Maker.makeCards(context , document);
             return null;
         }
 

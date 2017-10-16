@@ -6,7 +6,7 @@ import android.os.Bundle;
 import edu.amrita.theenvironment.R;
 import edu.amrita.theenvironment.app.App;
 import edu.amrita.theenvironment.blog1.Blog1Parser;
-import edu.amrita.theenvironment.blog2.Blog2Parser;
+import edu.amrita.theenvironment.blog3.Blog3Parser;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,6 +15,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         App.init();
-        new Blog2Parser(this).run();
+        new Blog3Parser(this).run();
     }
 }
