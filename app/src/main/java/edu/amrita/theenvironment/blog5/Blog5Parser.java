@@ -7,7 +7,9 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 import java.io.IOException;
+import java.util.concurrent.ExecutionException;
 
+import edu.amrita.theenvironment.blog1.Blog1Parser;
 import edu.amrita.theenvironment.utils.Constants;
 
 public class Blog5Parser {
@@ -17,12 +19,12 @@ public class Blog5Parser {
 
     public static void run(Context context) {
         Blog5Parser.context = context;
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                new Task().doInBackground();
-            }
-        }).start();
+        try {
+            new Blog5Parser.Task().execute().get();
+        }
+        catch (InterruptedException | ExecutionException ex) {
+            ex.printStackTrace();
+        }
     }
 
     private static class Task extends AsyncTask<Void , Void , Void> {
@@ -37,8 +39,6 @@ public class Blog5Parser {
             }
             document = Jsoup.parse(document.html().substring(document.html().indexOf("<ul class=\"small-block-grid-1 medium-block-grid-2\">"),
                     document.html().indexOf("<div class=\"small-12 medium-5 large-4 columns\">")));
-            /*int idx = document.html().indexOf("Unaffiliated components</h2>");
-            document = Jsoup.parse(document.html().substring(0 , idx + 28) + "<p></p>" + document.html().substring(idx + 28 , document.html().length()));*/
             Card5Maker.makeCards(context , document);
             return null;
         }

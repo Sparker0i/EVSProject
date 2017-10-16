@@ -20,7 +20,6 @@ class Card5Maker {
 
     static void makeCards(Context context , Document string) {
         divs = string.getElementsByClass("card");
-        System.out.println(divs);
         imageLinks = divs.select("img");
         links = new ArrayList<>();
         images = new ArrayList<>();

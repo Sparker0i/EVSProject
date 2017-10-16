@@ -7,7 +7,9 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 import java.io.IOException;
+import java.util.concurrent.ExecutionException;
 
+import edu.amrita.theenvironment.blog1.Blog1Parser;
 import edu.amrita.theenvironment.utils.Constants;
 
 public class Blog2Parser {
@@ -17,12 +19,12 @@ public class Blog2Parser {
 
     public static void run(Context context) {
         Blog2Parser.context = context;
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                new Task().doInBackground();
-            }
-        }).start();
+        try {
+            new Blog2Parser.Task().execute().get();
+        }
+        catch (InterruptedException | ExecutionException ex) {
+            ex.printStackTrace();
+        }
     }
 
     private static class Task extends AsyncTask<Void , Void , Void> {

@@ -7,6 +7,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 import java.io.IOException;
+import java.util.concurrent.ExecutionException;
 
 import edu.amrita.theenvironment.utils.Constants;
 
@@ -17,12 +18,12 @@ public class Blog1Parser {
 
     public static void run(Context context) {
         Blog1Parser.context = context;
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                new Task().doInBackground();
-            }
-        }).start();
+        try {
+            new Task().execute().get();
+        }
+        catch (InterruptedException | ExecutionException ex) {
+            ex.printStackTrace();
+        }
     }
 
     private static class Task extends AsyncTask<Void , Void , Void> {
@@ -39,14 +40,6 @@ public class Blog1Parser {
                     document.html().indexOf("<nav role=\"navigation\" id=\"nav-below\" class=\"paging-navigation\">")));
             Card1Maker.makeCards(context , document);
             return null;
-        }
-
-        @Override
-        protected void onPostExecute(Void aVoid) {
-            super.onPostExecute(aVoid);
-            /*Intent intent = new Intent(Global.this , MainActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);*/
         }
     }
 }
