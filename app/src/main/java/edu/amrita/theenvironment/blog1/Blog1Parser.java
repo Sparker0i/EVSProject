@@ -15,11 +15,8 @@ public class Blog1Parser {
     private static Document document;
     private static Context context;
 
-    public Blog1Parser(Context context) {
+    public static void run(Context context) {
         Blog1Parser.context = context;
-    }
-
-    public void run() {
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -40,7 +37,6 @@ public class Blog1Parser {
             }
             document = Jsoup.parse(document.html().substring(document.html().indexOf("<article id="),
                     document.html().indexOf("<nav role=\"navigation\" id=\"nav-below\" class=\"paging-navigation\">")));
-            //System.out.println(document);
             Card1Maker.makeCards(context , document);
             return null;
         }

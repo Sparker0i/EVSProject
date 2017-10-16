@@ -36,7 +36,7 @@ class Card2Maker {
         System.out.println(titles);
         int n = images.size();
         for (int i = 0; i < n; i++) {
-            ((App) context.getApplicationContext()).cardlist.add(new Model(links.get(i) , images.get(i) , titles.get(i)));
+            ((App) context).cardlist.add(new Model(links.get(i) , images.get(i) , titles.get(i)));
         }
     }
 }

@@ -15,11 +15,8 @@ public class Blog2Parser {
     private static Document document;
     private static Context context;
 
-    public Blog2Parser(Context context) {
+    public static void run(Context context) {
         Blog2Parser.context = context;
-    }
-
-    public void run() {
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -40,7 +37,6 @@ public class Blog2Parser {
             }
             document = Jsoup.parse(document.html().substring(document.html().indexOf("<main id=\"main\" class=\"site-main\" role=\"main\">"),
                     document.html().indexOf("<!-- .site-main -->")));
-            //System.out.println(document);
             Card2Maker.makeCards(context , document);
             return null;
         }

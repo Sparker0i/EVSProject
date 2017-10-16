@@ -15,11 +15,8 @@ public class Blog5Parser {
     private static Document document;
     private static Context context;
 
-    public Blog5Parser(Context context) {
+    public static void run(Context context) {
         Blog5Parser.context = context;
-    }
-
-    public void run() {
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -42,7 +39,6 @@ public class Blog5Parser {
                     document.html().indexOf("<div class=\"small-12 medium-5 large-4 columns\">")));
             /*int idx = document.html().indexOf("Unaffiliated components</h2>");
             document = Jsoup.parse(document.html().substring(0 , idx + 28) + "<p></p>" + document.html().substring(idx + 28 , document.html().length()));*/
-            System.out.println(document);
             Card5Maker.makeCards(context , document);
             return null;
         }

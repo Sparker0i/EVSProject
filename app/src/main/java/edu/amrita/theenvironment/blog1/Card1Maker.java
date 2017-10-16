@@ -22,7 +22,6 @@ class Card1Maker {
         for (int i = 5; i < divs.size(); ++i) {
             divs.remove(i);
         }
-        System.out.println(divs);
         links = new ArrayList<>();
         images = new ArrayList<>();
         titles = new ArrayList<>();
@@ -39,7 +38,7 @@ class Card1Maker {
         System.out.println(titles);
         int n = images.size();
         for (int i = 0; i < n; i++) {
-            ((App) context.getApplicationContext()).cardlist.add(new Model(links.get(i) , images.get(i) , titles.get(i)));
+            ((App) context).cardlist.add(new Model(links.get(i) , images.get(i) , titles.get(i)));
         }
     }
 }

@@ -15,11 +15,8 @@ public class Blog3Parser {
     private static Document document;
     private static Context context;
 
-    public Blog3Parser(Context context) {
+    public static void run(Context context) {
         Blog3Parser.context = context;
-    }
-
-    public static void run() {
         new Thread(new Runnable() {
             @Override
             public void run() {
