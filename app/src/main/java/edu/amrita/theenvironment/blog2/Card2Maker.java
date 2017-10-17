@@ -20,6 +20,9 @@ class Card2Maker {
     static void makeCards(Context context , Document string) {
         divs = string.select("article");
         divs.remove(0);
+        for (int i = 4; i < divs.size(); ++i) {
+            divs.remove(i);
+        }
         links = new ArrayList<>();
         images = new ArrayList<>();
         titles = new ArrayList<>();
@@ -36,7 +39,7 @@ class Card2Maker {
         System.out.println(titles);
         int n = images.size();
         for (int i = 0; i < n; i++) {
-            ((App) context).cardlist.add(new Model(links.get(i) , images.get(i) , titles.get(i)));
+            ((App) context).cardlist.add(new Model(titles.get(i) , images.get(i) , links.get(i)));
         }
     }
 }

@@ -19,7 +19,9 @@ class Card3Maker {
 
     static void makeCards(Context context , Document string) {
         divs = string.select("li");
-        //System.out.println(divs);
+        for (int i = 3; i < divs.size(); ++i) {
+            divs.remove(i);
+        }
         imageLinks = divs.select("img");
         links = new ArrayList<>();
         images = new ArrayList<>();
@@ -38,7 +40,7 @@ class Card3Maker {
         System.out.println(titles);
         int n = images.size();
         for (int i = 0; i < n; i++) {
-            ((App) context).cardlist.add(new Model(links.get(i) , images.get(i) , titles.get(i)));
+            ((App) context).cardlist.add(new Model(titles.get(i) , images.get(i) , links.get(i)));
         }
     }
 }
