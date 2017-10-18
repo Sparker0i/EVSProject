@@ -40,7 +40,7 @@ public class AboutCard extends Card {
                             }
                         }
                 );
-                (parent.findViewById(R.id.name)).setOnClickListener(
+                (parent.findViewById(R.id.aaditya)).setOnClickListener(
                         new View.OnClickListener()
                         {
                             @Override
@@ -52,24 +52,102 @@ public class AboutCard extends Card {
                             }
                         }
                 );
-                break;
-            }
-
-            case 2:
-            {
-                (parent.findViewById(R.id.credits)).setOnClickListener(
+                (parent.findViewById(R.id.aswin)).setOnClickListener(
                         new View.OnClickListener()
                         {
                             @Override
                             public void onClick(View v)
                             {
                                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                                intent.setData(Uri.parse(context.getString(R.string.dev_2_link)));
+                                intent.setData(Uri.parse(context.getString(R.string.aswin_link)));
                                 context.startActivity(intent);
                             }
                         }
                 );
-
+                (parent.findViewById(R.id.aswin_link)).setOnClickListener(
+                        new View.OnClickListener()
+                        {
+                            @Override
+                            public void onClick(View v)
+                            {
+                                Intent intent = new Intent(Intent.ACTION_VIEW);
+                                intent.setData(Uri.parse(context.getString(R.string.aswin_link)));
+                                context.startActivity(intent);
+                            }
+                        }
+                );
+                (parent.findViewById(R.id.amretanand)).setOnClickListener(
+                        new View.OnClickListener()
+                        {
+                            @Override
+                            public void onClick(View v)
+                            {
+                                Intent intent = new Intent(Intent.ACTION_VIEW);
+                                intent.setData(Uri.parse(context.getString(R.string.amretanand_link)));
+                                context.startActivity(intent);
+                            }
+                        }
+                );
+                (parent.findViewById(R.id.amretanand_link)).setOnClickListener(
+                        new View.OnClickListener()
+                        {
+                            @Override
+                            public void onClick(View v)
+                            {
+                                Intent intent = new Intent(Intent.ACTION_VIEW);
+                                intent.setData(Uri.parse(context.getString(R.string.amretanand_link)));
+                                context.startActivity(intent);
+                            }
+                        }
+                );
+                (parent.findViewById(R.id.rahul)).setOnClickListener(
+                        new View.OnClickListener()
+                        {
+                            @Override
+                            public void onClick(View v)
+                            {
+                                Intent intent = new Intent(Intent.ACTION_VIEW);
+                                intent.setData(Uri.parse(context.getString(R.string.rahul_link)));
+                                context.startActivity(intent);
+                            }
+                        }
+                );
+                (parent.findViewById(R.id.rahul_link)).setOnClickListener(
+                        new View.OnClickListener()
+                        {
+                            @Override
+                            public void onClick(View v)
+                            {
+                                Intent intent = new Intent(Intent.ACTION_VIEW);
+                                intent.setData(Uri.parse(context.getString(R.string.rahul_link)));
+                                context.startActivity(intent);
+                            }
+                        }
+                );
+                (parent.findViewById(R.id.sachin)).setOnClickListener(
+                        new View.OnClickListener()
+                        {
+                            @Override
+                            public void onClick(View v)
+                            {
+                                Intent intent = new Intent(Intent.ACTION_VIEW);
+                                intent.setData(Uri.parse(context.getString(R.string.amretanand_link)));
+                                context.startActivity(intent);
+                            }
+                        }
+                );
+                (parent.findViewById(R.id.sachin_link)).setOnClickListener(
+                        new View.OnClickListener()
+                        {
+                            @Override
+                            public void onClick(View v)
+                            {
+                                Intent intent = new Intent(Intent.ACTION_VIEW);
+                                intent.setData(Uri.parse(context.getString(R.string.sachin_link)));
+                                context.startActivity(intent);
+                            }
+                        }
+                );
                 break;
             }
 

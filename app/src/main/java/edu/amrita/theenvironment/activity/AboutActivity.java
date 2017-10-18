@@ -8,6 +8,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.AbsListView;
 
 import java.util.ArrayList;
@@ -25,15 +26,11 @@ import it.gmariotti.cardslib.library.view.listener.SwipeOnScrollListener;
 
 public class AboutActivity extends AppCompatActivity
 {
-    @BindView(R.id.toolbar) Toolbar toolbar;
-    @BindView(R.id.about_list) CardListView aboutList;
+    Toolbar toolbar;
+    CardListView aboutList;
     CardArrayAdapter cardArrayAdapter;
     ArrayList<Card> cards;
-    @BindView(R.id.fab) FloatingActionButton fab;
-    @OnClick(R.id.fab) void onClick() {
-        Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:" + Constants.Mail));
-        startActivity(Intent.createChooser(intent , getString(R.string.choose_app)));
-    }
+    FloatingActionButton fab;
     private int previousVisibleItem;
 
     @Override
@@ -41,6 +38,16 @@ public class AboutActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
+        aboutList = findViewById(R.id.about_list);
+        fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:" + Constants.Mail));
+                startActivity(Intent.createChooser(intent , getString(R.string.choose_app)));
+            }
+        });
+        toolbar = findViewById(R.id.toolbar);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         ButterKnife.bind(this);
         setSupportActionBar(toolbar);
@@ -56,7 +63,6 @@ public class AboutActivity extends AppCompatActivity
         cards = new ArrayList<>();
 
         cards.add(new AboutCard(this , R.layout.about_card_layout_1 , 1));
-        cards.add(new AboutCard(this , R.layout.about_card_layout_2 , 2));
         cards.add(new AboutCard(this , R.layout.about_card_layout_3 , 3));
         cards.add(new AboutCard(this , R.layout.about_card_layout_4 , 4));
         cards.add(new AboutCard(this , R.layout.about_card_layout_5 , 5));
