@@ -15,10 +15,8 @@ import edu.amrita.theenvironment.utils.Constants;
 public class Blog2Parser {
 
     private static Document document;
-    private static Context context;
 
-    public static void run(Context context) {
-        Blog2Parser.context = context;
+    public static void run() {
         try {
             new Blog2Parser.Task().execute().get();
         }
@@ -39,7 +37,7 @@ public class Blog2Parser {
             }
             document = Jsoup.parse(document.html().substring(document.html().indexOf("<main id=\"main\" class=\"site-main\" role=\"main\">"),
                     document.html().indexOf("<!-- .site-main -->")));
-            Card2Maker.makeCards(context , document);
+            Card2Maker.makeCards(document);
             return null;
         }
 

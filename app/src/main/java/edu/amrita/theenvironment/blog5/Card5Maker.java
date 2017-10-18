@@ -18,11 +18,8 @@ class Card5Maker {
     static ArrayList<String> links , images , titles;
 
 
-    static void makeCards(Context context , Document string) {
+    static void makeCards(Document string) {
         divs = string.getElementsByClass("card");
-        for (int i = 3; i < divs.size(); ++i) {
-            divs.remove(i);
-        }
         imageLinks = divs.select("img");
         links = new ArrayList<>();
         images = new ArrayList<>();
@@ -40,7 +37,7 @@ class Card5Maker {
         System.out.println(titles);
         int n = divs.size();
         for (int i = 0; i < n; i++) {
-            ((App) context).cardlist.add(new Model(titles.get(i) , images.get(i) , links.get(i)));
+            App.cardlist.add(new Model(titles.get(i) , images.get(i) , links.get(i)));
         }
     }
 }

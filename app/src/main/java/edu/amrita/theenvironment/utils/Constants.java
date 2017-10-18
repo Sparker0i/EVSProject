@@ -6,4 +6,8 @@ public class Constants {
     public static final String blog3 = "https://www.treehugger.com";
     public static final String blog4 = "https://www.seeker.com/earth";
     public static final String blog5 = "http://grist.org/";
+
+    public static final String Mail = "me@sparker0i.me";
+
+    public static final String LIBRARY_ID = "libId";
 }

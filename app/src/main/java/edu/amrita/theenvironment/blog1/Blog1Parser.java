@@ -14,10 +14,8 @@ import edu.amrita.theenvironment.utils.Constants;
 public class Blog1Parser {
 
     private static Document document;
-    private static Context context;
 
-    public static void run(Context context) {
-        Blog1Parser.context = context;
+    public static void run() {
         try {
             new Task().execute().get();
         }
@@ -38,7 +36,7 @@ public class Blog1Parser {
             }
             document = Jsoup.parse(document.html().substring(document.html().indexOf("<article id="),
                     document.html().indexOf("<nav role=\"navigation\" id=\"nav-below\" class=\"paging-navigation\">")));
-            Card1Maker.makeCards(context , document);
+            Card1Maker.makeCards(document);
             return null;
         }
     }

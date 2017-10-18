@@ -15,10 +15,8 @@ import edu.amrita.theenvironment.utils.Constants;
 public class Blog5Parser {
 
     private static Document document;
-    private static Context context;
 
-    public static void run(Context context) {
-        Blog5Parser.context = context;
+    public static void run() {
         try {
             new Blog5Parser.Task().execute().get();
         }
@@ -39,7 +37,7 @@ public class Blog5Parser {
             }
             document = Jsoup.parse(document.html().substring(document.html().indexOf("<ul class=\"small-block-grid-1 medium-block-grid-2\">"),
                     document.html().indexOf("<div class=\"small-12 medium-5 large-4 columns\">")));
-            Card5Maker.makeCards(context , document);
+            Card5Maker.makeCards(document);
             return null;
         }
 

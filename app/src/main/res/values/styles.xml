@@ -15,4 +15,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="about_card">
+        <item name="android:layout_marginTop">@dimen/about_card_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/about_card_margin_bottom</item>
+        <item name="android:layout_marginLeft">@dimen/about_card_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/about_card_margin_right</item>
+    </style>
 </resources>
