@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:orientation="vertical">
+    android:layout_gravity="center">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="4dp"
         android:paddingTop="4dp"
-        android:text="@string/inspiration_header"
+        android:paddingBottom="4dp"
+        android:text="@string/blogs_header"
         android:textColor="@color/accent"
-        android:textSize="@dimen/font_normal" />
+        android:textSize="@dimen/font_normal"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,19 +22,19 @@
         android:paddingTop="@dimen/margin_normal"
         android:paddingBottom="@dimen/margin_normal"
         android:background="?android:attr/selectableItemBackground"
-        android:id="@+id/insp_1">
+        android:id="@+id/blog_1">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/insp_1"
+            android:text="@string/blog_1"
             android:textColor="@color/card_text_primary"
             android:textSize="@dimen/font_normal"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/insp_1_author"
+            android:text="@string/blog_1_author"
             android:textSize="@dimen/font_normal"/>
 
     </LinearLayout>
@@ -45,19 +46,19 @@
         android:paddingTop="@dimen/margin_normal"
         android:paddingBottom="@dimen/margin_normal"
         android:background="?android:attr/selectableItemBackground"
-        android:id="@+id/insp_2">
+        android:id="@+id/blog_2">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/insp_2"
+            android:text="@string/blog_2"
             android:textColor="@color/card_text_primary"
             android:textSize="@dimen/font_normal"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/insp_2_author"
+            android:text="@string/blog_2_author"
             android:textSize="@dimen/font_normal"/>
 
     </LinearLayout>
@@ -69,21 +70,20 @@
         android:paddingTop="@dimen/margin_normal"
         android:paddingBottom="@dimen/margin_normal"
         android:background="?android:attr/selectableItemBackground"
-        android:id="@+id/insp_3">
+        android:id="@+id/blog_3">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/insp_3"
+            android:text="@string/blog_3"
             android:textColor="@color/card_text_primary"
             android:textSize="@dimen/font_normal"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/insp_3_author"
+            android:text="@string/blog_3_author"
             android:textSize="@dimen/font_normal"/>
 
     </LinearLayout>
-
 </LinearLayout>

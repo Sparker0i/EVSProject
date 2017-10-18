@@ -151,17 +151,49 @@ public class AboutCard extends Card {
                 break;
             }
 
+            case 2:
+            {
+                (parent.findViewById(R.id.blog_1)).setOnClickListener(
+                        new View.OnClickListener()
+                        {
+                            @Override
+                            public void onClick(View v)
+                            {
+                                Intent intent = new Intent(Intent.ACTION_VIEW);
+                                intent.setData(Uri.parse(context.getString(R.string.blog_1_link)));
+                                context.startActivity(intent);
+                            }
+                        }
+                );
+                (parent.findViewById(R.id.blog_2)).setOnClickListener(
+                        new View.OnClickListener()
+                        {
+                            @Override
+                            public void onClick(View v)
+                            {
+                                Intent intent = new Intent(Intent.ACTION_VIEW);
+                                intent.setData(Uri.parse(context.getString(R.string.blog_2_link)));
+                                context.startActivity(intent);
+                            }
+                        }
+                );
+                (parent.findViewById(R.id.blog_3)).setOnClickListener(
+                        new View.OnClickListener()
+                        {
+                            @Override
+                            public void onClick(View v)
+                            {
+                                Intent intent = new Intent(Intent.ACTION_VIEW);
+                                intent.setData(Uri.parse(context.getString(R.string.blog_3_link)));
+                                context.startActivity(intent);
+                            }
+                        }
+                );
+                break;
+            }
+
             case 3:
             {
-                parent.findViewById(R.id.lib_1).setOnClickListener(new View.OnClickListener()
-                {
-                    @Override
-                    public void onClick(View v)
-                    {
-                        showLicense(1);
-                    }
-                });
-
                 parent.findViewById(R.id.lib_2).setOnClickListener(new View.OnClickListener()
                 {
                     @Override
@@ -189,39 +221,12 @@ public class AboutCard extends Card {
                     }
                 });
 
-                parent.findViewById(R.id.lib_5).setOnClickListener(new View.OnClickListener()
-                {
-                    @Override
-                    public void onClick(View v)
-                    {
-                        showLicense(5);
-                    }
-                });
-
                 parent.findViewById(R.id.lib_6).setOnClickListener(new View.OnClickListener()
                 {
                     @Override
                     public void onClick(View v)
                     {
                         showLicense(6);
-                    }
-                });
-
-                parent.findViewById(R.id.lib_7).setOnClickListener(new View.OnClickListener()
-                {
-                    @Override
-                    public void onClick(View v)
-                    {
-                        showLicense(7);
-                    }
-                });
-
-                parent.findViewById(R.id.lib_8).setOnClickListener(new View.OnClickListener()
-                {
-                    @Override
-                    public void onClick(View v)
-                    {
-                        showLicense(8);
                     }
                 });
 
@@ -259,34 +264,6 @@ public class AboutCard extends Card {
                     }
                 });
                 break;
-            }
-
-            case 5:
-            {
-                parent.findViewById(R.id.insp_1).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(Intent.ACTION_VIEW);
-                        intent.setData(Uri.parse(context.getString(R.string.insp_1_link)));
-                        context.startActivity(intent);
-                    }
-                });
-                parent.findViewById(R.id.insp_2).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(Intent.ACTION_VIEW);
-                        intent.setData(Uri.parse(context.getString(R.string.insp_2_link)));
-                        context.startActivity(intent);
-                    }
-                });
-                parent.findViewById(R.id.insp_3).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(Intent.ACTION_VIEW);
-                        intent.setData(Uri.parse(context.getString(R.string.insp_3_link)));
-                        context.startActivity(intent);
-                    }
-                });
             }
         }
     }

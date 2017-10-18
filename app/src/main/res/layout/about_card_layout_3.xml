@@ -22,30 +22,6 @@
         android:paddingTop="@dimen/margin_normal"
         android:paddingBottom="@dimen/margin_normal"
         android:background="?android:attr/selectableItemBackground"
-        android:id="@+id/lib_1">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/lib_1"
-            android:textColor="@color/card_text_primary"
-            android:textSize="@dimen/font_normal"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/lib_1_author"
-            android:textSize="@dimen/font_normal"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingTop="@dimen/margin_normal"
-        android:paddingBottom="@dimen/margin_normal"
-        android:background="?android:attr/selectableItemBackground"
         android:id="@+id/lib_2">
 
         <TextView
@@ -118,30 +94,6 @@
         android:paddingTop="@dimen/margin_normal"
         android:paddingBottom="@dimen/margin_normal"
         android:background="?android:attr/selectableItemBackground"
-        android:id="@+id/lib_5">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/lib_5"
-            android:textColor="@color/card_text_primary"
-            android:textSize="@dimen/font_normal"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/lib_5_author"
-            android:textSize="@dimen/font_normal"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingTop="@dimen/margin_normal"
-        android:paddingBottom="@dimen/margin_normal"
-        android:background="?android:attr/selectableItemBackground"
         android:id="@+id/lib_6">
 
         <TextView
@@ -155,54 +107,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/lib_6_author"
-            android:textSize="@dimen/font_normal"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingTop="@dimen/margin_normal"
-        android:paddingBottom="@dimen/margin_normal"
-        android:background="?android:attr/selectableItemBackground"
-        android:id="@+id/lib_7">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/lib_7"
-            android:textColor="@color/card_text_primary"
-            android:textSize="@dimen/font_normal"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/lib_7_author"
-            android:textSize="@dimen/font_normal"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingTop="@dimen/margin_normal"
-        android:paddingBottom="@dimen/margin_normal"
-        android:background="?android:attr/selectableItemBackground"
-        android:id="@+id/lib_8">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/lib_8"
-            android:textColor="@color/card_text_primary"
-            android:textSize="@dimen/font_normal"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/lib_8_author"
             android:textSize="@dimen/font_normal"/>
 
     </LinearLayout>

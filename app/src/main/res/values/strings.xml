@@ -11,11 +11,24 @@
 
     <string name="choose_app">Choose an App</string>
 
+    <string name="blog_2">20-something-environmentalist</string>
+    <string name="blog_2_author">Lindsay McNamara</string>
+    <string name="blog_2_link">https://lindsaymcnamara.com</string>
+
+    <string name="blog_1">Food Policy for Thought</string>
+    <string name="blog_1_author">Food Policy for Thought</string>
+    <string name="blog_1_link">http://foodpolicyforthought.com</string>
+
+    <string name="blog_3">Grist</string>
+    <string name="blog_3_author">Grist Magazine, Inc.</string>
+    <string name="blog_3_link">http://grist.org</string>
+
     <string name="github">GITHUB</string>
     <string name="other_apps">OTHER APPS</string>
     <string name="author_header">AUTHORS</string>
     <string name="credits_header">CREDITS</string>
     <string name="libraries_header">OPEN SOURCE LICENSES</string>
+    <string name="blogs_header">BLOG LINKS</string>
     <string name="license_header">LICENSE</string>
     <string name="inspiration_header">INSPIRATION</string>
     <string name="build_version">Build version</string>
@@ -25,7 +38,7 @@
     <string name="dev_2_title">Aswin M Guptha</string>
     <string name="dev_2_name">Blog Parser</string>
     <string name="dev_2_link">https://www.facebook.com/aswinmguptha</string>
-    <string name="dev_3_title">Amretanand Balan</string>
+    <string name="dev_3_title">Amretanand B</string>
     <string name="dev_3_name">Blog Picker</string>
     <string name="dev_3_link">https://www.facebook.com/amruthanand.balan</string>
     <string name="dev_4_title">Rahul P</string>
@@ -37,13 +50,6 @@
     <string name="facebook">FACEBOOK</string>
     <string name="app_license">App License</string>
     <string name="app_license_value">GNU GPL v3</string>
-
-    <string name="lib_1">Weather Icons</string>
-    <string name="lib_1_author">Erik Flowers</string>
-    <string name="lib_1_link">https://github.com/erikflowers/weather-icons/</string>
-    <string name="lib_1_license"><![CDATA[
-    Weather Icons licensed under SIL OFL 1.1]]>
-    </string>
 
     <string name="lib_2">Material Drawer</string>
     <string name="lib_2_author">Mike Penz</string>
@@ -62,52 +68,25 @@
     <string name="lib_4_license"><![CDATA[Copyright 2016 Mike Penz]]>
     </string>
 
-    <string name="lib_5">MPAndroidChart</string>
-    <string name="lib_5_author">Philipp Jahoda</string>
-    <string name="lib_5_link">https://github.com/PhilJay/MPAndroidChart/</string>
-    <string name="lib_5_license"><![CDATA[Copyright 2016 Philipp Jahoda]]></string>
-
     <string name="lib_6">Material Dialogs</string>
     <string name="lib_6_author">Aidan Follestad</string>
     <string name="lib_6_link">https://github.com/afollestad/material-dialogs</string>
     <string name="lib_6_license"><![CDATA[Copyright © 2014–2016 Aidan Michael Follestad]]></string>
-
-    <string name="lib_7">Material Bottom Navigation</string>
-    <string name="lib_7_author">Alessandro Crugnola</string>
-    <string name="lib_7_link">https://github.com/sephiroth74/Material-BottomNavigation</string>
-    <string name="lib_7_license"><![CDATA[Copyright © 2016 Alessandro Crugnola]]></string>
-
-    <string name="lib_8">Material Tap Target Prompt</string>
-    <string name="lib_8_author">Samuel Wall</string>
-    <string name="lib_8_link">https://github.com/sjwall/MaterialTapTargetPrompt</string>
-    <string name="lib_8_license"><![CDATA[Copyright © 2016 Samuel Wall ]]></string>
 
     <string name="lib_9">Material Icons</string>
     <string name="lib_9_author">Google</string>
     <string name="lib_9_link">https://github.com/google/material-design-icons</string>
     <string name="lib_9_license"><![CDATA[Copyright © 2016 Google ]]></string>
 
-    <string name="lib_10">Gson</string>
-    <string name="lib_10_author">Google</string>
-    <string name="lib_10_link">https://github.com/google/gson</string>
-    <string name="lib_10_license"><![CDATA[Copyright © 2016 Google ]]></string>
+    <string name="lib_10">Jsoup</string>
+    <string name="lib_10_author">jhy</string>
+    <string name="lib_10_link">https://github.com/jhy/jsoup/</string>
+    <string name="lib_10_license"><![CDATA[Copyright © 2016 Jonathan Headley ]]></string>
 
     <string name="lib_11">Butterknife</string>
     <string name="lib_11_author">Jake Wharton</string>
     <string name="lib_11_link">https://github.com/JakeWharton/butterknife</string>
     <string name="lib_11_license"><![CDATA[Copyright 2013 Jake Wharton ]]></string>
-
-    <string name="insp_1">Good Weather</string>
-    <string name="insp_1_author">AsdTm</string>
-    <string name="insp_1_link">https://play.google.com/store/apps/details?id=org.asdtm.goodweather</string>
-
-    <string name="insp_2">Forecastie</string>
-    <string name="insp_2_author">Castica Labs</string>
-    <string name="insp_2_link">https://play.google.com/store/apps/details?id=com.casticalabs.forecastie</string>
-
-    <string name="insp_3">Mini RTO</string>
-    <string name="insp_3_author">chandruscm</string>
-    <string name="insp_3_link">https://play.google.com/store/apps/details?id=com.chandruscm.minirto</string>
 
     <string name="license_link">https://www.gnu.org/licenses/gpl-3.0.txt</string>
 

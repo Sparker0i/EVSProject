@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.mikepenz.iconics.IconicsDrawable;
@@ -28,32 +29,30 @@ public class LicenseActivity extends AppCompatActivity
     private String license;
     private String library;
     private String link;
-    @BindView(R.id.license) TextView licText;
-    @BindView(R.id.fab) FloatingActionButton fab;
-    @OnClick(R.id.fab) void onClick() {
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse(link));
-        startActivity(intent);
-    }
+    TextView licText;
+    FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_license);
+        licText = findViewById(R.id.license);
+        fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(link));
+                startActivity(intent);
+            }
+        });
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         ButterKnife.bind(this);
         libID = getIntent().getExtras().getInt(Constants.LIBRARY_ID);
 
         switch (libID)
         {
-            case 1:
-            {
-                library = getString(R.string.lib_1);
-                license = getString(R.string.lib_1_license) + getString(R.string.mit_license);
-                link = getString(R.string.lib_1_link);
-                break;
-            }
             case 2:
             {
                 library = getString(R.string.lib_2);
@@ -75,32 +74,11 @@ public class LicenseActivity extends AppCompatActivity
                 link = getString(R.string.lib_4_link);
                 break;
             }
-            case 5:
-            {
-                library = getString(R.string.lib_5);
-                license = getString(R.string.lib_5_license) + getString(R.string.apache_license);
-                link = getString(R.string.lib_5_link);
-                break;
-            }
             case 6:
             {
                 library = getString(R.string.lib_6);
                 license = getString(R.string.lib_6_license) + getString(R.string.mit_license);
                 link = getString(R.string.lib_6_link);
-                break;
-            }
-            case 7:
-            {
-                library = getString(R.string.lib_7);
-                license = getString(R.string.lib_7_license) + getString(R.string.mit_license);
-                link = getString(R.string.lib_7_link);
-                break;
-            }
-            case 8:
-            {
-                library = getString(R.string.lib_8);
-                license = getString(R.string.lib_8_license) + getString(R.string.apache_license);
-                link = getString(R.string.lib_8_link);
                 break;
             }
             case 9:
